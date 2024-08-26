@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sisingja <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 15:29:16 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/24 17:14:39 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/08/26 21:44:12 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib>
+# include <stdlib.h>
 # include <unistd.h>
 
 typedef struct	s_list
@@ -39,7 +39,7 @@ int	ft_toupper(int  c);
 int	ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-int	ft_strncmp(const char *s1, const *s2, size_t n);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
