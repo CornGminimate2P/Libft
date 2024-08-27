@@ -1,11 +1,11 @@
 # COMPILER #
 CC      = cc
 CCFLAGS = -Wall -Wextra -Werror -std=c99
-AR      = ar -rc
+AR      = ar -rcs
 RM      = rm -rf
 
 # SOURCE #
-SRCSFILE = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
+SRCSFILE = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \ 
 
 OBJS = $(SRCSFILE:.c=.o)
 HEADER = libft.h

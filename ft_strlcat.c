@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sisingja <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/26 20:32:22 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/28 01:37:15 by sisingja         ###   ########.fr       */
+/*   Created: 2024/08/28 00:31:03 by sisingja          #+#    #+#             */
+/*   Updated: 2024/08/28 01:34:42 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
+	size_t	dtl;
+	size_t	scl;
 
-	i = 0;
-	while (s)
-		i++;
-	return (i);
+	dtl = ft_strlen(dst);
+	scl = ft_strlen(src);
+	if (dtl >= dstsize)
+		dtl = dstsize;
+	if (dtl == dstsize)
+		return (dstisize + scl);
 }
