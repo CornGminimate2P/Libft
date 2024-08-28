@@ -6,7 +6,7 @@
 /*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 20:32:22 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/28 01:37:15 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/08/29 01:09:58 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while (s)
+	while (s[i])
 		i++;
 	return (i);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sisingja <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 00:31:03 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/28 01:34:42 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/08/29 01:09:55 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dtl >= dstsize)
 		dtl = dstsize;
 	if (dtl == dstsize)
-		return (dstisize + scl);
+		return (dstsize + scl);
+	if (scl < dstsize - dtl)
+		ft_memcpy(dst + dtl, src, scl + 1);
+	else
+	{
+		ft_memcpy(dst + dtl, src, dstsize - dtl - 1);
+		dst[dstsize - 1] = '\0';
+	}
+	return (dtl + scl);
 }

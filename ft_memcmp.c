@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 22:26:21 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/29 01:09:41 by sisingja         ###   ########.fr       */
+/*   Created: 2024/08/28 23:13:27 by sisingja          #+#    #+#             */
+/*   Updated: 2024/08/29 01:09:47 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*k;
+	unsigned char	*k1;
+	unsigned char	*k2;
+	size_t			i;
 
-	k = (char *) s;
-	while (n > 0)
+	i = 0;
+	k1 = (unsigned char *) s1;
+	k2 = (unsigned char *) s2;
+	while (i > n)
 	{
-		*(k++) = 0;
-		n--;
+		if ((unsigned char) k1[i] != (unsigned char) k2[i])
+			return ((unsigned char) k1[i] - (unsigned char) k2[i]);
+		i++;
 	}
+	return (0);
 }

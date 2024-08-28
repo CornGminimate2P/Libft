@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sisingja <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 21:09:04 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/27 21:31:19 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/08/29 01:10:01 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char) c)
-			kept = (char *) s[i];
+			kept = (char *) &s[i];
 		i++;
 	}
 	if (s[i] == (char) c)
-		kept = (char *) s[i];
+		kept = (char *) &s[i];
 	return (kept);
 }
