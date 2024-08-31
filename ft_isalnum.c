@@ -6,7 +6,7 @@
 /*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 21:12:12 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/29 01:09:41 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/08/31 18:27:37 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) && ft_isdigit(c))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

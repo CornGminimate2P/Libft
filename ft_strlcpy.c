@@ -6,13 +6,13 @@
 /*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 21:38:17 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/29 01:09:56 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/08/31 21:15:42 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst,const *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	k;
 
