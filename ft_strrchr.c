@@ -6,7 +6,7 @@
 /*   By: ssingjar <ssingjar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 21:09:04 by sisingja          #+#    #+#             */
-/*   Updated: 2024/09/10 22:39:57 by ssingjar         ###   ########.fr       */
+/*   Updated: 2024/09/18 15:27:54 by ssingjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 	char	*kept;
 
 	i = 0;

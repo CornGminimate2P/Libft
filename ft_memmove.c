@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ssingjar <ssingjar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 22:53:08 by sisingja          #+#    #+#             */
-/*   Updated: 2024/08/31 20:21:58 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/09/24 21:17:23 by ssingjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*fdt;
-	const char	*fsc;
+	char		*dest;
+	const char	*source;
 
-	fdt = (char *) dst;
-	fsc = (const char *) src;
+	dest = (char *) dst;
+	source = (const char *) src;
 	if ((!dst && !src) || (len == 0))
 		return (dst);
-	if (fdt < fsc || (fdt >= fsc + len))
+	if (dest < source || (dest >= source + len))
 	{
 		while ((len--) > 0)
-			*fdt++ = *fsc++;
+			*dest++ = *source++;
 	}
 	else
 	{
-		fdt += len;
-		fsc += len;
+		dest += len;
+		source += len;
 		while (len--)
-			*(--fdt) = *(--fsc);
+			*(--dest) = *(--source);
 	}
 	return (dst);
 }
