@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssingjar <ssingjar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sisingja <ssingjar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 22:11:09 by ssingjar          #+#    #+#             */
-/*   Updated: 2024/09/25 21:53:24 by ssingjar         ###   ########.fr       */
+/*   Updated: 2024/09/25 22:48:50 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	long int	nb;
 
 	if (n == -2147483648)
-    return (gimme = ft_strdup("-2147483648"));
+		return (gimme = ft_strdup("-2147483648"));
 
 	nb = n;
 	i = f_size(nb);
