@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sisingja <ssingjar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sisingja <sisingja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 22:47:49 by sisingja          #+#    #+#             */
-/*   Updated: 2024/09/25 22:47:54 by sisingja         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:31:19 by sisingja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*s;
 	size_t			i;
 
+	if (count != 0 && (size > INT_MAX / count))
+		return (NULL);
 	i = 0;
 	s = malloc(count * size);
 	if (!s)
